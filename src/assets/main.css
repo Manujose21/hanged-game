@@ -1,0 +1,40 @@
+@import './base.css';
+@tailwind components;
+@tailwind utilities;
+
+button {
+  padding: 0.75rem;
+  font-family: 'Press Start 2P';
+  background-color: var(--vt-c-black-soft);
+  color: var(--vt-c-white-soft);
+  border: 3px solid var(--vt-c-yellow);
+  box-shadow: 5px 5px var(--vt-c-yellow);
+  cursor: pointer;
+  margin: 1rem;
+  font-weight: 900;
+  min-width: 150px;
+  transition: background 0.15s;
+}
+
+button:hover {
+  background: var(--vt-c-black-soft);
+  color: var(--vt-c-white);
+}
+
+input {
+  padding: 8px;
+  background: var(--vt-c-black-soft);
+  border: 5px solid var(--vt-c-yellow);
+  color: var(--vt-c-white);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+}
+
+.word-spaces {
+  width: 17px;
+  height: 5px;
+  background-color: var(--vt-c-black-soft);
+  margin-right: 1rem;
+}
