@@ -1,14 +1,26 @@
 <template>
   <!-- menu -->
-  <template v-if="changeView === 'MENU'">
+  <template v-if="AppState === 'MENU'">
     <div class="hanged-menu">
       <principal-menu></principal-menu>
     </div>
   </template>
   <!-- paly game -->
-  <template v-else>
+  <template v-else-if="AppState === 'GAME'">
     <div class="hanged-game">
       <game-play></game-play>
+    </div>
+  </template>
+
+  <template v-else-if="AppState === 'LOSER'">
+    <div class="hanged-menu">
+      <game-over></game-over>
+    </div>
+  </template>
+
+  <template v-else-if="AppState === 'WINNER'">
+    <div class="hanged-menu">
+      <game-win></game-win>
     </div>
   </template>
 </template>
@@ -17,7 +29,10 @@
 import { useHanged } from '@/composables/useHanged'
 import PrincipalMenu from './PrincipalMenu.vue'
 import GamePlay from './GamePlay.vue'
-const { changeView } = useHanged()
+import GameOver from './GameOver.vue'
+import GameWin from './GameWin.vue'
+
+const { AppState } = useHanged()
 </script>
 
 <style scoped>

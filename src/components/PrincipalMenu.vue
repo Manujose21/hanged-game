@@ -3,8 +3,8 @@
     <h1>HANGED GAME</h1>
     <img src="../assets/hanged-image.png" alt="hanged" class="min-w-40 max-w-56" />
 
-    <button @click="changeView = 'GAME'">
-      <span class="">Play</span>
+    <button @click="AppState = 'GAME'">
+      <span class="">Jugar</span>
       <i class="bi bi-play-fill hidden"></i>
     </button>
   </div>
@@ -13,7 +13,7 @@
 <script lang="ts" setup>
 import { useHanged } from '@/composables/useHanged'
 
-const { changeView } = useHanged()
+const { AppState } = useHanged()
 </script>
 
 <style scoped>

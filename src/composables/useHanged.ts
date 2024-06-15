@@ -1,9 +1,9 @@
 import { ref } from 'vue'
 import type { Views } from './types'
-const changeView = ref<Views>('MENU')
+const AppState = ref<Views>('MENU')
 
 export const useHanged = () => {
   return {
-    changeView,
+    AppState,
   }
 }
