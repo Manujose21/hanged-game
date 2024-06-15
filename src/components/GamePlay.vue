@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-8">
     <p class="text-2xl">❤️ {{ attempts }}</p>
     <div class="flex justify-center bg-white p-8">
       <LetterSpaces :word="word" :exist="exist" />
@@ -13,12 +13,12 @@
     />
     <button @click="existingLetter()">Probar</button>
   </div>
-  <HangedDoll />
+  <!-- <HangedDoll /> -->
 </template>
 
 <script lang="ts" setup>
 import LetterSpaces from './LetterSpaces.vue'
-import HangedDoll from './HangedDoll.vue'
+// import HangedDoll from './HangedDoll.vue'
 import { useGamePlay } from '@/composables/useGamePlay'
 
 const { exist, input, attempts, word, selectLetterValidator, selectWord, existingLetter } =

@@ -7,7 +7,7 @@
   </template>
   <!-- paly game -->
   <template v-else-if="AppState === 'GAME'">
-    <div class="hanged-game">
+    <div class="hanged-menu">
       <game-play></game-play>
     </div>
   </template>
