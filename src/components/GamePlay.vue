@@ -1,4 +1,5 @@
 <template>
+  <h2>Adivina la palabra</h2>
   <div class="mt-8">
     <p class="text-2xl">❤️ {{ attempts }}</p>
     <div class="flex justify-center bg-white p-8">
