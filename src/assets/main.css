@@ -10,7 +10,7 @@ button {
   border: 3px solid var(--vt-c-yellow);
   box-shadow: 5px 5px var(--vt-c-yellow);
   cursor: pointer;
-  margin: 1rem;
+  margin: 1rem 0;
   font-weight: 900;
   min-width: 150px;
   transition: background 0.15s;

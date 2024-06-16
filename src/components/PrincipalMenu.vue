@@ -1,6 +1,6 @@
 <template>
   <div class="principal-menu">
-    <h1>HANGED GAME</h1>
+    <h2>HANGED GAME</h2>
     <img src="../assets/hanged-image.png" alt="hanged" class="min-w-40 max-w-56" />
 
     <button @click="AppState = 'GAME'">

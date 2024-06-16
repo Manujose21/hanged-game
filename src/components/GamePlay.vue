@@ -12,9 +12,9 @@
       @input="selectLetterValidator()"
     />
 
-    <button @click="existingLetter()">Probar</button>
+    <button @click="existingLetter()">Intentar</button>
 
-    <h1>Letras utilzadas</h1>
+    <h3>Letras utilzadas</h3>
     <div class="mt-4 max-w-96 flex gap-4">
       <h2 v-for="({ letter, isSuccess }, index) in letterSelected" :key="index">
         {{ letter }} {{ isSuccess }}
@@ -39,6 +39,7 @@ const {
   existingLetter,
   letterSelected,
 } = useGamePlay()
+
 attempts.value = 10
 selectWord()
 </script>

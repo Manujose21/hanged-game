@@ -48,6 +48,9 @@ const { AppState } = useHanged()
   @apply flex 
   flex-col 
   gap-8 
-  items-center;
+  items-center 
+  justify-center
+  min-h-screen
+  px-4;
 }
 </style>
