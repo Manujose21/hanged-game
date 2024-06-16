@@ -12,10 +12,10 @@ export const useGamePlay = () => {
   const input = ref('')
   const exist = ref<boolean>(false)
   const word = ref<LetterData[]>([])
-
+  const letterSelected = ref<{ letter: string; isSuccess: string }[]>([])
   // word select
   const selectWord = () => {
-    const numberWord = Math.floor(Math.random() * 178)
+    const numberWord = Math.floor(Math.random() * 82)
     const wordRandomSelect = words[numberWord]
 
     wordRandomSelect
@@ -51,7 +51,9 @@ export const useGamePlay = () => {
         })
       })
 
+      letterSelected.value.push({ letter: input.value, isSuccess: '✅' })
       AppState.value = arrLettersVisibles.includes(false) ? 'GAME' : 'WINNER'
+      return
     }
 
     // if attemps is zero is loser
@@ -59,8 +61,11 @@ export const useGamePlay = () => {
       AppState.value = 'LOSER'
       return
     }
-
-    if (filter.length === 0) attempts.value--
+    // letter incorrect
+    if (filter.length === 0) {
+      attempts.value--
+      letterSelected.value.push({ letter: input.value, isSuccess: '❌' })
+    }
   }
 
   return {
@@ -68,6 +73,7 @@ export const useGamePlay = () => {
     attempts,
     word,
     exist,
+    letterSelected,
     selectWord,
     selectLetterValidator,
     existingLetter,
